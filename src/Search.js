@@ -57,8 +57,12 @@ class SearchBook extends Component {
           }
 
           this.setState({'searchResults' : uniqueResults })
+        }else{
+          this.setState({'searchResults' : [] })
         }
       }).catch(error => this.setState({'searchResults' : [] }))
+    }else{
+      this.setState({'searchResults' : [] })
     }
   }
 
